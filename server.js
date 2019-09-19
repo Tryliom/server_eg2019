@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require("body-parser");
+var cors = require('cors')
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 const port = 3666;
 
@@ -20,10 +22,10 @@ app.post('/canardpc', (req, res) => {
   const pwd = req.body.password;
 
   if (pwd == "I LOVE POUTINE")
-      res.send(JSON.parse({
+      res.json({
 		  "pcx":"",
 		  "ip-pcy":""
-		}));
+		});
   else
 	  res.send("error");
 });
