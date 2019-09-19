@@ -1,0 +1,4 @@
+# Put this folder in a place and copy the path as [PATH]
+# Create a .bat with:
+node [PATH]\server.js
+# And put it in C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
